@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<head> <!-- Open Head -->
+    <title>3D HTML Tut</title>
+    <link rel="stylesheet" href="General.css">
+    <!-- Put script here -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <!-- End of script-->
+</head> <!-- Close Head -->
+<body>
+    <div id="main">
+        <Header><h1>Showing 3D Models in HTML</h1></Header>
+        <div class="topnav">
+            <img src="Images/bitmap2.png"/>
+            <a href="./Index.html">Home</a>
+            <a href="./Week1.html">HTML/CSS</a>
+            <a href="./p2.html">3D Modeling</a>
+            <a href="#contact">Contact</a>
+            <a class="active" href="#">3D Model HTML</a>
+        </div>
+
+        <div id="content">
+            <div class="intro" >
+                <h2>How does this work?</h2>
+                <p>idk the details, but we will be using a pre-made readily available javascript module to show a .gltf file. 
+                    However, Fusion 360 does not allow you to export .gltf files, so we will need to use an extension.<br>
+                    <br>
+                    Too many things to do? Worry not, I'll share what I know.<br>
+                    <br>
+                     However, keep in mind i barely know anything about this, so if you have better methods, please share!
+                </p>
+                <br>
+                <h2>Let's get right into it:</h2>
+            </div>
+            <div class="box1" style="padding: 5px;">
+                <h2>Fusion 360 .gltf exporter extension</h2>
+                <p>Fusion 360 can not export .gltf files by default, so we have to do it ourselves. <br><br>
+                    Thankfully, someone on the internet has already done all the hard work for us, so we just need to use an extension.</p>
+                
+                <div class="box3" style="width: 95%; margin-left: auto; margin-right: auto;">
+                    <h3 style="padding: 5px;">GLTF Exporter for Autodesk® Fusion 360™ - Trial</h3>
+                    <p style="padding: 5px;">Click 
+                        <a href="https://apps.autodesk.com/FUSION/pt/Detail/Index?id=935621094053886114&appLang=en&os=Win64&autostart=true"><ins style="color: lightblue;">here</ins></a>
+                     to download the trial version of the extension. There are some limitations to it, but it has all that we need. 
+                     Click on "Fazer download", sign in to Autodesk®, then download and run it</p>
+                     <img src="Images/tut_1.JPG" style="width:95%; height: auto; margin-left: auto; margin-right: auto; display: block; padding-bottom: 5px;"/>
+                </div>
+
+                <h3>Open Fusion 360</h3>
+                <p>You may need to restart Fusion 360 to see the extension on the top bar. Click on it to reveal the GLTF button. Click on that to export it.</p>
+                <img src="Images/tut_2.JPG" style="width:95%; height: auto; margin-left: auto; margin-right: auto; display: block; padding-bottom: 5px;"/>
+                <br>
+                <p>A popup should appear. Save it in your desired folder:</p>
+                <img src="Images/tut_3.JPG" style="width:65%; height: auto; margin-left: auto; margin-right: auto; display: block; padding-bottom: 5px;"/>
+                <br>
+            </div>
+            <br>
+            <div class="box2" style="padding: 5px;">
+                <h2>Coding</h2>
+                <p>Time for the boring part. However, this is necessary to get you 3D model up onto the site, so bear with me. 
+                    I'll give you the codes I used, and you can also check the repository for it too.</p>
+                <br>
+                <div class="box1" style="width: 95%; margin-left: auto; margin-right: auto;">
+                    <h3>Model-Viewer Module</h3>
+                    <p>This is the almighty javascript module that allows you to display your 3D model. Don't ask how it works, cause I too, don't know.
+                    Check it out <a href="https://modelviewer.dev"><ins style="color: lightblue;">here</ins></a></p>
+                    <br>
+                    <div class="box2" style="width: 95%; margin-left: auto; margin-right: auto;">
+                        <h3>Import Module</h3>
+                        <p>Insert <ins><span><</span>script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"><span><</span>/script></ins> 
+                            between your <span><</span>head> tags. Below is how it should look like:</p>
+                        <img src="Images/tut_4.JPG" style="width:95%; height: auto; margin-left: auto; margin-right: auto; display: block; padding-bottom: 5px;"/>
+                    </div>
+                    <br>
+                    <div class="box3" style="width: 95%; margin-left: auto; margin-right: auto;">
+                        <h3>Display</h3>
+                        <p>Now we can display the model. Here's my code for it: </p>
+                        <p style="padding-left: 15%;">
+                            <span><</span>div id="modelBox"> <br>
+                            <span style="padding-left: 5%;"><</span>model-viewer id="c" src="FileName.gltf" camera-controls><span><</span>/model-viewer> <br>
+                            <span><</span>/div>
+                        </p>
+                        <img src="Images/tut_5.JPG" style="width:95%; height: auto; margin-left: auto; margin-right: auto; display: block; padding-bottom: 5px;"/>
+                    </div>
+                    <br>
+                    <div class="box2" style="width: 95%; margin-left: auto; margin-right: auto;">
+                        <h3>Extra CSS</h3>
+                        <p>Gotta make it look nice right? Here's my CSS codes</p>
+                        <div style="text-align:center">
+                            <div style="display: inline-block; margin-left: auto; margin-right: auto; height: auto; width: 20%;"><pre style="text-align: left">#c {<br>    margin-left: auto;<br>    margin-right: auto;<br>    width: 50%;<br>    display: block;<br>}<br><br>#modelBox {<br>    width: 100%;<br>    height: auto;<br>}<br></pre></div>
+                            <img src="Images/tut_6.JPG" style="display: inline-block; margin-left: auto; margin-right: auto; height: auto; width: 20%"/>
+                        </div>
+                        <br>
+                        <p>Don't forget to import your CSS files!</p>
+                        <br>
+                    </div>
+                    <br>
+                </div>
+                <br>
+                <div class="box3" style="width: 95%; margin-left: auto; margin-right: auto;">
+                    <h2>Finale</h2>
+                    <p>Here is the finished product! My model is titled wrongly in the original file, but it still works, so don't mind it.</p>
+                    <div id="modelBox">
+                        <model-viewer id="c" src="model/Chess_Knight v1.gltf" camera-controls></model-viewer>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

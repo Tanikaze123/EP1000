@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<head>
+    <title>3D printing</title>
+    <link rel="stylesheet" href="General.css">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+<body>
+    <div id="main">
+        <Header><h1>CAD</h1></Header>
+        <div class="topnav">
+            <img src="Images/bitmap2.png"/>
+            <a href="./Index.html">Home</a>
+            <a href="./Week1.html">HTML/CSS</a>
+            <a class="active" href="#">3D Modeling</a>
+            <a href="#contact">Contact</a>
+            <a href="./tut.html">3D Model HTML</a>
+        </div>
+
+        <div id="content">
+            <div class="intro">
+                <h2>Fusion 360</h2>
+                <p>This is my process of making a 3D model of a Knight Chess piece, starting from a 2D drawing.</p>
+                <br>
+                <h2>Here's how I did it:</h2>
+            </div>
+            <div class="box1">
+                <h2>Finding a suitable sketch</h2>
+                <p>Finding a suitable image to begin with makes things easier. However, there are many things to consider, such as how the final image will look like. It is recommend to just start with a simple one. Here's what I picked:</p>
+                <a style="width: 30%; margin-left: auto; margin-right: auto; display: block;" href="https://www.vectorstock.com/royalty-free-vector/silhouette-of-a-knight-chess-piece-vector-22954434" target="_blank"><img style="width: 100%; margin-left: auto; margin-right: auto; display: block;" src="Images/knightChess.jpg"/></a>
+            </div>
+            <div class="box2">
+                <h2>Canvas And Drawing</h2>
+                <p>So we insert the image as a canvas to allow us to better draw the silhouette and extrude.<br>
+                    Then we draw the silhouette. Since my base will be circular, I use the revolve tool. My Knight body is flat so I'll use extrude.
+                </p>
+                <div style="text-align:center">
+                    <img src="Images/p2_2.JPG" style="display: inline-block; margin-left: auto; margin-right: auto; height: auto; width: 30%">
+                    <img src="Images/p2_3.JPG" style="display: inline-block; margin-left: auto; margin-right: auto; height: auto; width: 30%">
+                </div>
+            </div>
+            <div class="box3">
+                <h2>Extruding and Revolving</h2>
+                <p>As said above, I'll be using a combination of revolving and extruding to get my desired outcome. The process will vary depending on your original image and your desired outcome.</p>
+                <div style="text-align:center">
+                    <img src="Images/p2_4.JPG" style="display: inline-block; margin-left: auto; margin-right: auto; height: auto; width: 30%">
+                    <img src="Images/p2_5.JPG" style="display: inline-block; margin-left: auto; margin-right: auto; height: auto; width: 30%">
+                </div>
+            </div>
+            <div class="box1">
+                <h2>Fine-tuning</h2>
+                <p>The model is essential done. However, I want my knight to have rounded edges. Thus, I'll be using the fillet tool to round off the edges.</p>
+                <img style="width: 30%; margin-left: auto; margin-right: auto; display: block;" src="Images/p2_6.JPG"/>
+            </div>
+
+            <div class="box3">
+                <h2>3D Model</h2>
+                <p>My model is titled wrongly, but it still works, so don't mind it.</p>
+                <div id="modelBox">
+                    <model-viewer id="c" src="model/Chess_Knight v1.gltf" camera-controls></model-viewer>
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
+</body>
