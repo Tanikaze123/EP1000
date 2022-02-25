@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<head>
+    <title>Arduino</title>
+    <link rel="stylesheet" href="General.css">
+</head>
+<body>
+    <div id="main">
+        <Header><h1>Html/CSS</h1></Header>
+        <div class="topnav">
+            <img src="Images/bitmap2.png"/>
+            <a href="./index.html">Home</a>
+            <a href="./Week1.html">HTML/CSS</a>
+            <a href="./p2.html">3D Modeling</a>
+            <a href="./About.html">About</a>
+            <a href="./tools.html">Tools</a>
+            <a href="./tut.html">3D Model HTML</a>
+            <a href="./arduino.html">Arduino</a>
+            <a class="active" href="./finalProj.html">Final Project</a>
+        </div>
+        <div id="content">
+            <div class="intro">
+                <h2>Final Project</h2>
+                <p>For my final project, I will be doing a Macro pad.</p>
+                <br>
+            </div>
+            <div class="box1">
+                <h3>Inspirations and references</h3>
+                <a href="https://youtu.be/OCwuDV3WIkM?list=LL">Jan Lunge - Rotary encoder macro pad - Build & Get most out of it Youtube Video</a>
+                <a href="https://www.youtube.com/watch?v=IDlcxLQ1SbY">Ryan Bates - Arduino Pro Micro Macro Keyboard Version 2.0 Youtube Video</a>
+                <a href="https://www.instructables.com/Programmable-Macropad-V2/">TinyBoatProductions - Programmable Macropad V2 Instructables</a>
+            </div>
+            <br>
+            <div class="box2">
+                <h3>3D printing</h3>
+                <iframe width="725" height="453" src="https://www.tinkercad.com/embed/ih5J2RnvpJm?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+                <p>This is the 3D model that I designed for the macro pad. Do note that the height of the holes made for the rotary encoder is incorrect. there is a need to shorten it.</p>
+                <p>If you want to design one yourself, some dimensions to take note of is the width of the keys and the diameter of the rotary encoder.</p>
+            </div>
+            <br>
+            <div class="box1">
+                <h3>Materials</h3>
+                <ul>
+                    <li>Diodes x 17 (1N4148)</li>
+                    <li>Rotary Encoders x2 (EC11)</li>
+                    <li>Switches x 20 (Cherry MX Black Hyperglide)</li>
+                    <li>Arduino Pro Micro x 1</li>
+                    <li>Charging Cable for Arduino x 1</li>
+                </ul>
+            </div>
+            <div class="box1">
+                <h3>Wiring</h3>
+                <p>Unfortunately, I have wired the switches wrongly, so only some keys are working. I will instead show other's wiring digrams.</p>
+                <p>Since the arduino has only 16 input pins, for it to register all the keys we need, we can use a combination of their Keypad library and Switch Matrix to register up to a max of 72 keys on an 8x8 matrix.</p>
+                <img src="https://raw.githubusercontent.com/wlard/keyboards/main/w3by2-rotary/images/macropad-pinout.png" href="https://github.com/wlard/keyboards/blob/main/w3by2-rotary/images/macropad-pinout.png" style="width:500px;height:auto;"/>
+            </div>
+
+            <div class="box3">
+                <h3>Arduino Code</h3>
+                <p>We will be using multiple libraries to code the file, so make sure to download them before running the code.</p>
+                <a href="">Code here</a>
+            </div>
+
+        </div>
+    </div>
